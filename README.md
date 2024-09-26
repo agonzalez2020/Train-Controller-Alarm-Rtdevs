@@ -9,6 +9,7 @@ Uppaal 5.0 (https://uppaal.org/)
 
 # Files
 Uppaal-Train-Controller-Alarm.xml: projecto Uppaal
+
 RT-DEVS-Train-Controller-Alarm.eps: especificación del sistema ferroviario con el formalismo RT-DEVS.
 
 # Caso de Estudio: Sistema Ferroviario (cruce de trenes)
@@ -17,4 +18,5 @@ No se puede subir el articulo, tal como está?? y se podría decir que se encuen
 # Contenido del Proyecto Uppaal
 ## Templates:
 Train: TA que modela el comportamiento de los trenes en la zona de cruce.
+
 Controller: 
