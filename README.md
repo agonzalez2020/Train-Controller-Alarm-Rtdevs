@@ -19,4 +19,15 @@ No se puede subir el articulo, tal como está?? y se podría decir que se encuen
 ## Templates:
 Train: TA que modela el comportamiento de los trenes en la zona de cruce.
 
-Controller: 
+Controller: TA que controla el acceso exclusivo de los trenes al puente de cruce.
+
+Alar: ...
+
+TimeBounded_Response: Ta que modela la QTP Time-Bounded Response.
+
+TA_tb_3: TA mutante de Time-Bounded Response.
+
+TA_tb_4: TA mutante de Time-Bounded Response.
+
+ Pongo todos los TA de los patrones y mutantes?? Hay mutantes que surgen de instanciar lso patrones (no son TA nuevos, como el caso del TA_tb_3 y 4)
+ 
