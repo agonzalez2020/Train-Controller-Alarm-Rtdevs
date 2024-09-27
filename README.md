@@ -1,4 +1,4 @@
-#RealTime-DEVS model of a railway controller implemented in Uppaal
+# RealTime-DEVS model of a railway controller implemented in Uppaal
 
 This is an Uppaal project about a model of a railway controller (RCS). The RCS is first described in RealTime-DEVS and then is translated into Uppaal. One distinguishing feature of the RCS is that it must verify quantitative temporal properties (QTP). That is, the kind of temporal properties seen in real-time systems (for example, "the alarm must sound for 9 seconds"). QTP are recurrent properties in real-time systems. The translation from RealTime-DEVS into Uppaal, as well as the implementation of QTP, make use of a number of features of Uppaal's timed automata. Finally, the combination between these timed automata and some TCTL queries allow Uppaal to verify QTP.
 
