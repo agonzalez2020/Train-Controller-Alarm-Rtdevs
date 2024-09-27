@@ -16,7 +16,6 @@ chan priority appr, stop, leave, go , alarm_on &lt; urgent_channel;
 
 int trains_in_system=0;
 bool decompressing_area=false;
-bool start = false;
 bool input_enabled=true;</declaration>
 	<template>
 		<name>Urgent_Channel</name>
@@ -837,7 +836,7 @@ bool P() {return true;}
 		<transition id="id127">
 			<source ref="id120"/>
 			<target ref="id123"/>
-			<label kind="guard" x="-348" y="-8">x&gt;k &amp;&amp; not P() &amp;&amp; start</label>
+			<label kind="guard" x="-348" y="-8">x&gt;k &amp;&amp; not P()</label>
 		</transition>
 		<transition id="id128">
 			<source ref="id121"/>
@@ -1095,7 +1094,8 @@ _TA_cs_2 = TA_cs_2(interval_cs+11);
 
 //Mutant 3:
 /* Is there any trace where Q ceases to hold and from inf on (with inf &lt; k) ¬Q holds until the end of the interval?  
-  P y Q         inf         k    
+    Q
+    P         inf         k    
     |------------|----------|-------------
      QQQQQQQQQ¬Q¬Q¬Q¬Q¬Q¬Q¬Q¬Q...
 */
@@ -1297,7 +1297,7 @@ system Train, Controller, Alarm, Urgent_Channel, _TB_Response;
 		</query>
 		<query>
 			<formula>A[] not _Conditional_Security.Error</formula>
-			<comment>Propiedad Conditional Security. Si se activa la alarma durante x unidades de tiempo no se permite la entrada de trenes.</comment>
+			<comment/>
 			<option key="--diagnostic" value="0"/>
 			<result outcome="failure" type="quality" timestamp="2024-09-24 14:57:06 -0300">
 				<option key="--diagnostic" value="0"/>
@@ -1309,7 +1309,7 @@ system Train, Controller, Alarm, Urgent_Channel, _TB_Response;
 		</query>
 		<query>
 			<formula>A[] not _TA_cs_1.Error</formula>
-			<comment>Mutante 1 de Cond_security: verifica si Q() se mantiene por menos tiempo (levemente menos)</comment>
+			<comment/>
 			<result outcome="success" type="quality" timestamp="2024-09-24 14:58:47 -0300">
 				<option key="--diagnostic" value="0"/>
 			</result>
@@ -1320,7 +1320,7 @@ system Train, Controller, Alarm, Urgent_Channel, _TB_Response;
 		</query>
 		<query>
 			<formula>E&lt;&gt; _TA_cs_2.cont&gt;1</formula>
-			<comment>Verifica si Q deja y vuelve a ocurrir n veces dentro del intervalo de tiempo.</comment>
+			<comment/>
 		</query>
 		<query>
 			<formula/>
@@ -1328,15 +1328,14 @@ system Train, Controller, Alarm, Urgent_Channel, _TB_Response;
 		</query>
 		<query>
 			<formula>E&lt;&gt;  _TA_cs_3.D</formula>
-			<comment>Verifica si existe alguna traza en donde Q deja de ocurrir y a partir de ahi se mantiene not Q() por todo el intervalo.</comment>
+			<comment/>
 			<result outcome="success" type="quality" timestamp="2024-09-24 15:02:03 -0300">
 				<option key="--diagnostic" value="0"/>
 			</result>
 		</query>
 		<query>
 			<formula>E&lt;&gt; _TA_cs_4.D</formula>
-			<comment>Verificar si existe una traza en donde P y not Q valen al inicio, se mantiene not Q() por un lapso de tiempo menor a k y luego se mantiene Q hasta k.
-En decir, Q comienza a ocurre tarde dentro del intervalo.</comment>
+			<comment/>
 			<result outcome="success" type="quality" timestamp="2024-09-24 15:02:30 -0300">
 				<option key="--diagnostic" value="0"/>
 			</result>
