@@ -1,16 +1,15 @@
-# Train-Controller-Alarm-Rtdevs
-Train-Controller-Alarm-Rtdevs es un projecto Uppaal que permite verificar propiedades temporales cuantitativas (QTP) sobre un modelo de un sistema de cruce ferroviario. El sistema es modelado previamente con el formalismo Real-Time DEVS (Discrete Event System Specification), luego se realizó una traducción de modelos RT-DEVS a Autómatas Temporizados (TA) que admite Uppaal. 
-Las QTP son propiedades recurrentes en los sistemas de tiempo real (patrones) y son modeladas en Uppaal con autómatas temporizados (TA) que, junto a fórmulas TCTL, se puede verificar el cumplimiento de las mismas.
+#RealTime-DEVS model of a railway controller implemented in Uppaal
 
-Por otro lado, el proyecto Uppaal contiene mutantes de las QTP. Tales mutantes permiten descubrir errores de temporización en el modelo del sistema ferroviario cuando no satisface el patrón. Si el modelo del sistema no verifica el patrón pero si verifica un mutante se habrá descubierto la fuente del error en el modelo.
-Una descripción completa se puede ver en: https://arxiv.org/.... 
+This is an Uppaal project about a model of a railway controller (RCS). The RCS is first described in RealTime-DEVS and then is translated into Uppaal. One distinguishing feature of the RCS is that it must verify quantitative temporal properties (QTP). That is, the kind of temporal properties seen in real-time systems (for example, "the alarm must sound for 9 seconds"). QTP are recurrent properties in real-time systems. The translation from RealTime-DEVS into Uppaal, as well as the implementation of QTP, make use of a number of features of Uppaal's timed automata. Finally, the combination between these timed automata and some TCTL queries allow Uppaal to verify QTP.
 
-# Requisitos
+Furthermore, the project contains so-called mutants of QTP. These mutants allow users to find timing errors when some QTP is not verified by the model. If the model doesn't verify a QTP but it does verify one of its mutants, then the error can easily found.
+
+A thorough description of our technique is shown in this paper https://arxiv.org/....
+
+# Requirements
 Uppaal 5.0 (https://uppaal.org/)
 
 # Files
-Uppaal-Train-Controller-Alarm.xml: projecto Uppaal
+Uppaal-Train-Controller-Alarm.xml: Uppaal project
 
-RT-DEVS-Train-Controller-Alarm.eps: especificación del sistema ferroviario con el formalismo RT-DEVS.
-
-
+RT-DEVS-Train-Controller-Alarm.eps: RealTime-DEVS specification of the TCS
