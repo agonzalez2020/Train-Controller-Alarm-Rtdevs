@@ -12,10 +12,6 @@ This is an Uppaal project about a model of a railway controller (RCS). The RCS i
 
 Furthermore, the project contains so-called mutants of QTP. These mutants allow users to find timing errors when some QTP is not verified by the model. If the model doesn't verify a QTP but it does verify one of its mutants, then the error can easily found.
 
-
-### Requirements
-Uppaal 5.0 (https://uppaal.org/)
-
 ### Files
 Uppaal-Train-Controller-Alarm.xml: Uppaal project
 
@@ -30,3 +26,6 @@ Article: Lindahl M, Pettersson P and Yi W. "Formal design and analysis of a gear
 ### Files
 
 Uppaal_GearControlSystem.xml: Uppaal project
+
+## Requirements
+Uppaal 5.0 (https://uppaal.org/)
