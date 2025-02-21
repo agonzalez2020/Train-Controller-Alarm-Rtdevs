@@ -1,4 +1,4 @@
-# Verification of quantitative temporal properties in RealTime-DEVS with Uppaal
+# Experimental data for verification of quantitative temporal properties in RealTime-DEVS with Uppaal
 
 
 This is a repository of Uppaal projects for verifying quantitative properties of RealTime-DEVS models.
